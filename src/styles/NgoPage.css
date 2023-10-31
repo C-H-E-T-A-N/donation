@@ -65,7 +65,7 @@
 /* Media query for even smaller screens */
 @media screen and (max-width: 576px) {
     .ngo-front-container {
-        height: 170px;
+        height: 217px;
         align-items: flex-start;
 
     }

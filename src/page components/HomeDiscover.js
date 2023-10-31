@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/HomePage.css'
 import logo from '../assets/brown puppy.png'
-import paperPlane from '../assets/paper-plane.png'
 function HomeDiscover() {
   return (
     <div className='container' style={{ color: 'white' }}>
@@ -9,8 +8,8 @@ function HomeDiscover() {
         <div id='menu-left'>
           <h1 style={{ marginBottom: '57px', fontSize: '4rem', fontWeight: 'bold' }}>Discover NGO's</h1>
           <form action="submit" style={{ display: 'flex', alignItems: 'center' }}>
-            <input className='mx-2 menu-left-input text-center input-donate' placeholder='Enter Your Location' type="text" />
-            <button className='btn btn-donate btn-light' style={{ fontSize: '1.8rem', padding: '10px' }} ><img src={paperPlane} alt="paper-plane" /></button>
+            <input className='mx-2 menu-left-input text-center input-donate' placeholder='Enter NGO Name' type="text" />
+            <button className='btn btn-donate btn-light' style={{ fontSize: '1.8rem' }} ><i className="fa-regular fa-paper-plane" style={{fontSize:"2rem", padding:'10px'}}></i></button>
           </form>
         </div>
         <div id='menu-right' style={{ textAlign: 'center' }}>

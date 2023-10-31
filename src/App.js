@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import NgoPage from "./Pages/NgoPage";
 import Footer from "./components/Footer";
 import NgoProfilePage from "./Pages/NgoProfilePage";
+import SearchDropdown from "./page components/SearchBox";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<HomePage/>} />
             <Route path="/ngopage" element={<NgoPage/>} />
             <Route path="/ngoprofile/:id" element={<NgoProfilePage/>} />
+            <Route path="/search" element={<SearchDropdown/>} />
           </Routes>
           <Footer/>
      </Router>

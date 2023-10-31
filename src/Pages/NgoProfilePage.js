@@ -1,7 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react'
 import { useParams } from "react-router-dom";
 // import profileLogo from '../assets/dog-claw.png'
-import dogPaw from '../assets/dog-paw.png'
 import { Link } from 'react-router-dom'
 import NgoCases from '../page components/NgoCases'
 import '../styles/NgoProfilePage.css'
@@ -28,12 +27,12 @@ function NgoProfilePage() {
     },[getNgoById])
     return (
         <div className="container text-center my-3">
-            <div className='container' style={{ backgroundColor: '#EC9D45', borderRadius: '0.7rem', padding: '2rem' }}>
+            <div className='container shadow' style={{ backgroundColor: '#EC9D45', borderRadius: '0.7rem', padding: '2rem' }}>
                 <div className="row profile-row">
                     <div className="col-5 profile-col">
-                        <img  src={`http://127.0.0.1:8000${ngo.ngo_logo}`} className="img-fluid rounded float-start" alt="..." />
+                        <img  src={`http://127.0.0.1:8000${ngo.ngo_logo}`} className="img-fluid rounded float-start shadow-2" alt="..." />
                     </div>
-                    <div className="col-7 profile-col table-responsive">
+                    <div className="col-7  profile-col table-responsive">
                         <table className="table">
                             <thead>
                                 <tr>
@@ -63,7 +62,7 @@ function NgoProfilePage() {
                     </div>
                 </div>
                 <div style={{display:'flex', flexDirection:'column'}}>
-                            <button className="btn btn-donate mx-auto btn-light">Donate <img width='13%'  src={dogPaw} alt="dog-paw" /></button>
+                            <button className="btn btn-donate mx-auto btn-light">Donate <i className="fa-solid fa-paw"></i></button>
                             <div className=' my-2 mx-auto p-2'
                                 style={{
                                     borderRadius: "7px",

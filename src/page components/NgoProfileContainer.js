@@ -24,7 +24,7 @@ function NgoProfileContainer() {
 
   return (
     <div className="container" style={{ color: "white" }}>
-      <div className="bg-color-1 my-3 p-5" style={{ borderRadius: "40px" }}>
+      <div className="bg-color-1 my-5 p-5 shadow" style={{ borderRadius: "40px" }}>
         <h1 style={{ fontWeight: "bold" }}>Most Searched:</h1>
         <div className="row" style={{ textAlign: "center" }}>
           {allNgos.map((ngo, index) => (
@@ -78,7 +78,7 @@ function NgoProfileContainer() {
                     </Link>
                   </div>
                 </div>
-                <Link to={`/ngoprofile/${ngo.id}`} className="btn profile-btn btn-primary">VIEW</Link>
+                <Link to={`/ngoprofile/${ngo.id}`} className=" profile-btn btn btn-donate">VIEW</Link>
               </div>
             </div>
           ))}

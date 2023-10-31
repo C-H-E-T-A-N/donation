@@ -1,6 +1,5 @@
 import { React, useState } from 'react'
 import { Button, Modal } from "react-bootstrap";
-import dogPaw from '../assets/dog-paw.png'
 
 function NgoCases({ cases }) {
     const [show, setShow] = useState(false);
@@ -40,7 +39,7 @@ function NgoCases({ cases }) {
                 </table>
             </div>
             <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-                <Modal.Header closeButton>
+                <Modal.Header style={{backgroundColor:'#EC9D45', color:'#ffffff'}} closeButton>
                     <Modal.Title>Case Details</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -77,9 +76,9 @@ function NgoCases({ cases }) {
                     )}
 
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer >
 
-                    <Button className="btn btn-donate mx-auto btn-light">Donate <img width='13%' src={dogPaw} alt="dog-paw" /></Button>
+                    <Button className="btn btn-donate mx-auto btn-light">Donate <i className="fa-solid fa-paw"></i></Button>
                 </Modal.Footer>
             </Modal>
         </div>)
