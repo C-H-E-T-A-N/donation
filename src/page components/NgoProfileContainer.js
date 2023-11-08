@@ -1,13 +1,15 @@
 import React, { useState, useCallback, useEffect } from "react";
 import logo from "../assets/dog-claw.png";
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 
 function NgoProfileContainer() {
   const [allNgos, setAllNgos] = useState([]);
-
+  const location = useLocation()
+  const keyword = location.search
   const getAllNgos = useCallback(async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/ngos/allngos/`);
+      const response = await fetch(`http://127.0.0.1:8000/ngos/allngos${keyword}`);
       const data = await response.json();
       console.log(data);
       setAllNgos(data);
@@ -15,7 +17,7 @@ function NgoProfileContainer() {
       // Handle error, e.g., set an error state or display an error message
       console.error("Error fetching NGOs:", error);
     }
-  }, []);
+  }, [keyword]);
 
   useEffect(() => {
     getAllNgos();
