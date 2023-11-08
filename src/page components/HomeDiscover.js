@@ -1,15 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../styles/HomePage.css'
-import logo from '../assets/brown puppy.png'
+import { useNavigate, useLocation } from "react-router-dom";
+import logo from '../assets/brown puppy.png';
 function HomeDiscover() {
+  const [keyword, setKeyword] = useState('')
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const submitHandler =(e)=>{
+    e.preventDefault()
+    if(keyword){
+        navigate(`/ngopage/?keyword=${keyword}`)
+    }else{
+        navigate(location.pathname)
+    }
+  }
   return (
     <div className='container' style={{ color: 'white' }}>
       <div className='bg-color-1 my-3 p-5 home-discover-menu' >
         <div id='menu-left'>
           <h1 style={{ marginBottom: '57px', fontSize: '4rem', fontWeight: 'bold' }}>Discover NGO's</h1>
           <form action="submit" style={{ display: 'flex', alignItems: 'center' }}>
-            <input className='mx-2 menu-left-input text-center input-donate' placeholder='Enter NGO Name' type="text" />
-            <button className='btn btn-donate btn-light' style={{ fontSize: '1.8rem' }} ><i className="fa-regular fa-paper-plane" style={{fontSize:"2rem", padding:'10px'}}></i></button>
+            <input className='mx-2 menu-left-input text-center input-donate' onChange={(e)=> setKeyword(e.target.value)} placeholder='Enter NGO Name' type="text" />
+            <button className='btn btn-donate btn-light' onClick={submitHandler} style={{ fontSize: '1.8rem' }} ><i className="fa-regular fa-paper-plane" style={{fontSize:"2rem", padding:'10px'}}></i></button>
           </form>
         </div>
         <div id='menu-right' style={{ textAlign: 'center' }}>
