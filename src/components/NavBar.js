@@ -14,9 +14,7 @@ function NavBar() {
                     <div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <Link className="nav-link nav-text p-3" aria-current="page" to="/"><i className='fa fa-home icon-color-1'></i> Home</Link>
-                            <Link className="nav-link nav-text p-3" to="/discover"><i className="fa-solid fa-compass icon-color-1"></i> Discover</Link>
-                            <Link className="nav-link nav-text p-3" to="/ngopage"><i className="fa-solid fa-user-group icon-color-1"></i> NGO's</Link>
-                            <Link className="nav-link nav-text p-3" to="/info"><i className="fa-solid fa-circle-info icon-color-1"></i> Info</Link>
+                            <Link className="nav-link nav-text p-3" to="/ngopage"><i className="fa-solid fa-user-group icon-color-1"></i> NGOs</Link>
                             <Link className="nav-link nav-text p-3" to="/donate"><i className="fa-solid fa-circle-dollar-to-slot icon-color-1"></i> Donate</Link>
                         </div>
                     </div>
