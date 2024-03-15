@@ -1,6 +1,6 @@
 .ngo-front-container {
     position: relative;
-    border-radius: 0px 0px 70px 70px;
+    /* border-radius: 0px 0px 70px 70px; */
     height: 350px;
     display: flex;
     align-items: center;

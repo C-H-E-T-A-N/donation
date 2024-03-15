@@ -1,6 +1,10 @@
 .home-heading {
-    border-radius: 0px 0px 70px 70px;
+    /* border-radius: 0px 0px 70px 70px; */
     background-color: #EC9D45;
+    /* background-image: url('../assets/dogs.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
     height: 350px;
     max-width: 1280px;
 }
@@ -50,30 +54,37 @@
     flex-direction: column;
     color: #3A2416;
 }
-.impact-subHeaders
-{
+
+.impact-subHeaders {
     font-size: 2rem;
 }
-.story-card{
+
+.story-card {
     width: 18rem;
     border-radius: 10px;
-    
+
 }
-.carousel-caption-story
-{
+
+.carousel-caption-story {
     width: fit-content;
-    padding:1rem;
+    padding: 1rem;
     margin: auto;
     color: black;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
 }
-.carousel-btn{
+
+.carousel-btn {
     opacity: 1;
 }
-.carousel-btn-icon{
+
+.carousel-btn-icon {
     width: 7rem;
     height: 7rem;
+}
+.arrow-css{
+    font-size:2rem; 
+    padding:10px;
 }
 /* Media query for Samsung Galaxy Fold */
 @media screen and (max-width: 280px) and (min-height: 653px) {
@@ -114,9 +125,7 @@
         font-size: 0.5rem !important;
     }
 
-    #menu-right img {
-        border-radius: 10px !important;
-    }
+
 }
 
 /* Media query for even smaller screens */
@@ -134,6 +143,11 @@
 
     }
 
+    .arrow-css {
+        font-size: 1.5rem;
+        padding: 6px;
+    }
+
     .home-discover-menu {
         flex-direction: column-reverse;
     }
@@ -144,12 +158,13 @@
     }
 
     .home-discover-menu #menu-left h1 {
-        font-size: 2rem !important;
-        margin: 1rem 0 !important;
+        font-size: 1.5rem !important;
+        margin: 1rem !important;
     }
 
     .menu-left-input {
         font-size: 1rem !important;
+        padding: 14px;
     }
 
     .home-discover-menu #menu-left form button {
@@ -160,11 +175,12 @@
         font-size: 1.5rem;
         padding: 0 1rem;
     }
-    .impact-subHeaders
-    {
+
+    .impact-subHeaders {
         font-size: 1rem;
     }
-    .story-card{
+
+    .story-card {
         width: 13rem;
     }
 }
@@ -191,9 +207,6 @@
         font-size: 2rem !important;
     }
 
-    #menu-right img {
-        width: 40% !important;
-    }
 
 }
 

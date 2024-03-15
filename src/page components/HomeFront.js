@@ -12,6 +12,7 @@ function HomeFront() {
                 <div className="card text-center donate-card " >
                     <img className="card-img-top" style={{ margin: 'auto' }} src={logo} alt="Bootstrap" />
                     <div className="card-body">
+                    <span className='fw-light color-grey'>(To strayscue)</span>
                         <input type="Enter Amount" className='my-2 text-center input-donate' placeholder="Enter Amount" />
                         <button className="btn btn-donate btn-light">Donate here <i className="fa-solid fa-paw"></i></button>
                     </div>
